@@ -1,6 +1,6 @@
 Template.storeCreatePayment.onRendered(function () {
-  //Session.set('pack', null);
-  //Session.set('doc', null);
+  Session.set('pack', null);
+  Session.set('doc', null);
 });
 
 Template.storeCreatePayment.helpers({
@@ -31,6 +31,9 @@ Template.storeCreatePayment.helpers({
         type: String,
         regEx: SimpleSchema.RegEx.Email,
         label: 'Email',
+        autoform: {
+          type: 'email',
+        },
       },
     });
   },
