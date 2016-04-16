@@ -39,6 +39,13 @@ Template.storeCreatePayment.helpers({
   },
 });
 
+Template.storeCreatePayment.events({
+  'click .btn-cancel': function() {
+    Session.set('doc', null);
+    Session.set('pack', null);
+  }
+});
+
 AutoForm.hooks({
   newPaymentForm: {
     onSubmit: function (insertDoc) {

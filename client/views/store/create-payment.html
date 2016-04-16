@@ -23,11 +23,13 @@
     {{# if store.isProduction }}
       <form method="post" action="https://www.flow.cl/app/kpf/pago.php">
         <input type="hidden" name="parameters" value="{{ getPack }}" />
+        <button class="btn btn-cancel red" type="submit">Cancelar</button>
         <button class="btn btn-primary" type="submit">Pagar</button>
       </form>
     {{ else }}
       <form method="post" action="http://flow.tuxpan.com/app/kpf/pago.php">
         <input type="hidden" name="parameters" value="{{ getPack }}" />
+        <button class="btn btn-cancel red" type="button">Cancelar</button>
         <button class="btn btn-primary" type="submit">Pagar</button>
       </form>
       <p>
