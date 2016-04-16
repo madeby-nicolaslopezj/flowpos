@@ -1,0 +1,10 @@
+<template name="store">
+  {{# with store }}
+    <h3 class="store-name">{{ name }}</h3>
+    {{> storeCreatePayment store=this }}
+  {{ else }}
+    <p>
+      No se encontro la tienda
+    </p>
+  {{/ with }}
+</template>

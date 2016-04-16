@@ -1,0 +1,12 @@
+<template name='home'>
+  <h3>Selecciona tu tienda</h3>
+  {{# each stores }}
+    <p>
+      <a href="{{ pathFor 'store' storeId=_id }}">{{ name }}</a>
+    </p>
+  {{ else }}
+    <p>
+      No hay tiendas
+    </p>
+  {{/ each }}
+</template>

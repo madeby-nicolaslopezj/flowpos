@@ -1,0 +1,24 @@
+<template name="storeSuccess">
+  {{# with payment }}
+    <p>
+      <b>El pago se realizó</b>
+    </p>
+    <p>
+      Descripción: <b>{{ description }}</b>
+    </p>
+    <p>
+      Fecha: <b>{{ formatDate date 'LL' }}</b>
+    </p>
+    <p>
+      Monto: <b>{{ formatMoney amount }}</b>
+    </p>
+    <p>
+      Recibirá un email con los detalles
+    </p>
+    <p>
+      <a href="{{ pathFor 'store' storeId=meta.storeId }}">Volver</a>
+    </p>
+  {{ else }}
+    No se encontro el pago
+  {{/ with }}
+</template>

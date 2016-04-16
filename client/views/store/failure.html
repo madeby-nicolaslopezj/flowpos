@@ -1,0 +1,21 @@
+<template name="storeFailure">
+  {{# with payment }}
+    <p>
+      <b>El pago falló</b>
+    </p>
+    <p>
+      Descripción: <b>{{ description }}</b>
+    </p>
+    <p>
+      Fecha: <b>{{ date }}</b>
+    </p>
+    <p>
+      Monto: <b>{{ amount }}</b>
+    </p>
+    <p>
+      <a href="{{ pathFor 'store' storeId=meta.storeId }}">Volver</a>
+    </p>
+  {{ else }}
+    No se encontro el pago
+  {{/ with }}
+</template>
